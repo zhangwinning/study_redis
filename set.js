@@ -1,7 +1,6 @@
 let redis = require('redis');
 
 //连接redis
-
 let client = redis.createClient(6379, 'localhost');
 
 client.set('hello', 'this is a value');
@@ -11,9 +10,12 @@ Object.prototype.toString1 = function () {
 	return JSON.stringify(this);
 }
 
-client.set('hello2', {'a':1}.toString1()); 	//当调用对象时，redis会{'a':1}调用.toString()方法，会变成'[object Object]'。但是可以通过重写这个方法进行转化。
-
+// 当调用对象时，redis会{'a':1}调用.toString()方法，会变成'[object Object]'。
+// 但是可以通过重写这个方法进行转化。
+client.set('hello2', {'a':1}.toString1());
+ 	
 client.get('hello2', (err, value) => {
 	console.log(err, value, typeof value);
+	// 输出   null '{"a":1}' 'string'
 	client.quit();
 });

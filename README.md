@@ -19,72 +19,51 @@ redis 基本功能
 3. 消息中介 消息的订阅和发布
 
 端口信息:
-redis 6379	
-mongodb 27017
+redis 6379，mongodb 27017
 
 Redis基本应用
 
-1. 存储和获取值	--> set.js
-2. 列表
-3. 集合
-4. 消息中介
+1. 存储和获取值	--> set
+2. 列表			--> list
+3. 集合			--> sadd
+4. 消息中介      ---> subscribe、publish
 
 
+操作之前要确保redis服务启动。
+```
+brew info redis  //获取redis安装信息
+brew services start redis   //启动redis服务
+redis-cli	//连接reids数据库进行操作
+```
 
+//进入redis服务器的操作
+```
+keys *	// 获取所有健值
+get key // 获取key这个健值的value值
+```
 
- Redis 在express
+1、set 用法
 
+![set](./pictures/set.png)
 
+2、list 用法
 
+![list](./pictures/list.png)
 
+3、sadd用法（集合用法）
 
+集合和list的区别是集合中没有重复元素，而list可以允许重复
 
+![sets](./pictures/sets.png)
 
+4、消息中介
 
+ * 建立订阅者
 
+ ![sub](./pictures/sub.png)
 
+ * 建立发布者
 
+ ![publish](./pictures/publish.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# study_redis
+https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298
