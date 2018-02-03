@@ -66,4 +66,5 @@ get key // 获取key这个健值的value值
 
  ![publish](./pictures/publish.png)
 
-https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298
+
+[redis install](https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298)
