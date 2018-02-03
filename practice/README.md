@@ -16,7 +16,7 @@ curl -X POST http://localhost:3000/editUser  -H 'Content-Type: application/json'
 
 
 
-借鉴	[更新缓存套路](https://coolshell.cn/articles/17416.html)
+借鉴	陈皓的 [更新缓存套路](https://coolshell.cn/articles/17416.html)
 
 这里使用的是`Cache Aside `，具体逻辑是如下：
 
