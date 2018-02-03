@@ -43,4 +43,5 @@ curl -X POST http://localhost:3000/editUser  -H 'Content-Type: application/json'
 ```
 
 
-1、更新数据库，
+1、更新mongodb数据库；
+2、删除redis缓存；
