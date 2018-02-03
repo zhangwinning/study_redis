@@ -23,25 +23,25 @@ curl -X POST http://localhost:3000/editUser  -H 'Content-Type: application/json'
 
 #### 读取数据
 
-![app1](../pictures/app1.png);
+![app1](../pictures/app1.png)
 
 通过curl测试:
 ```
 curl -X POST http://localhost:3000/getUser  -H 'Content-Type: application/json'  -d '{"name":"liyao"}'
 ```
 
-1、读取redis缓存，存在，返回；不存在，读取mongodb数据库;
-2、数据mongodb，存在返回，并且通过保存到redis中；
-3、最后不存在直接返回为空。
+1. 读取redis缓存，存在，返回；不存在，读取mongodb数据库;
+2. 数据mongodb，存在返回，并且通过保存到redis中；
+3. 最后不存在直接返回为空。
 
 #### 更新数据
 
-![app2](../pictures/app2.png);
+![app2](../pictures/app2.png)
 
 ```
 curl -X POST http://localhost:3000/editUser  -H 'Content-Type: application/json'  -d '{"name":"liyao", "role": "girl"}'
 ```
 
 
-1、更新mongodb数据库；
-2、删除redis缓存；
+1. 更新mongodb数据库；
+2. 删除redis缓存；
