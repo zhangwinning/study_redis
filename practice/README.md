@@ -24,6 +24,6 @@ curl -X POST http://localhost:3000/editUser  -H 'Content-Type: application/json'
 * 命中：应用程序从cache中取数据，取到后返回。
 * 更新：先把数据存到数据库中，成功后，再让缓存失效。
 
-![cache_aside1](./pictures/cache_aside1.png)
+![cache_aside1](../pictures/cache_aside1.png)
 
-![cache_aside2](./pictures/cache_aside2.png)
+![cache_aside2](../pictures/cache_aside2.png)
