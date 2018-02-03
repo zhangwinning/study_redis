@@ -31,6 +31,7 @@ curl -X POST http://localhost:3000/getUser  -H 'Content-Type: application/json' 
 
 ![app2](../pictures/app2.png)
 
+通过curl测试:
 ```
 curl -X POST http://localhost:3000/editUser  -H 'Content-Type: application/json'  -d '{"name":"liyao", "role": "girl"}'
 ```
